@@ -1,0 +1,27 @@
+apply {
+    plugin 'java'
+    plugin 'maven-publish'
+}
+
+group('com.learning.personal')
+
+description = """"""
+compileJava.options.encoding = 'UTF-8'
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+sourceCompatibility = 1.17
+targetCompatibility = 1.17
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    implementation 'org.seleniumhq.selenium:selenium-java:4.10.0'
+    // https://mvnrepository.com/artifact/io.github.prashant-ramcharan/courgette-jvm
+    implementation 'io.github.prashant-ramcharan:courgette-jvm:6.10.0'
+
+}
